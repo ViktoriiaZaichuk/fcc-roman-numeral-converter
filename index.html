@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Roman Numeral Converter | FreeCodeCamp</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Roman Numeral Converter</h1>
+        </header>
+        <section class="form" aria-labelledby="converter-instructions">
+            <h2 id="converter-instructions">Enter a Number:</h2>
+
+            <form id="converter-form" aria-describedby="result">
+                <label for="text-input">Enter a number:</label>
+                <div class="input-wrapper">
+                    <input id="text-input" name="text-input" type="text" aria-required="true" required>
+                </div>
+                <div class="btn-wrapper">
+                    <button id="check-btn" type="button">Check</button>
+                </div>
+            </form>
+
+            <p id="result" role="alert" aria-live="polite"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
