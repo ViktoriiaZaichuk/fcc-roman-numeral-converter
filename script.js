@@ -32,9 +32,10 @@ const romanNumerals = (num) => {
 }
 
 const showOutput = () => {
-    const inputInt = parseInt(numberInput.value);
+    const inputValue = numberInput.value;
+    const inputInt = parseInt(inputValue);
 
-    if (inputInt === '') {
+    if (inputValue.trim() === '' || isNaN(inputInt)) {
         output.innerText = 'Please enter a valid number';
         return;
     } else if (inputInt < 1) {
@@ -45,6 +46,10 @@ const showOutput = () => {
         return;
     } else  {
         output.innerText = `${romanNumerals(inputInt)}`;
+        output.classList.remove('hidden');
+        setTimeout(() => {
+            output.classList.remove('opacity-0');
+        }, 10);
     }
 }
 

@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Roman Numeral Converter | FreeCodeCamp</title>
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Roman Numeral Converter</h1>
-        </header>
-        <section class="form" aria-labelledby="converter-instructions">
-
-            <form id="converter-form" aria-describedby="result">
-                <label for="text-input">Enter a number:</label>
-                <div class="input-wrapper">
-                    <input id="number" name="text-input" type="number" aria-required="true" required>
-                </div>
-                <div class="btn-wrapper">
-                    <button id="convert-btn" type="button">Check</button>
-                </div>
-            </form>
-
-            <p id="output" role="alert" aria-live="polite"></p>
-        </section>
+    <main class="min-h-dvh flex items-center justify-center">
+        <div class="">
+            <header class="mb-16">
+                <h1 class="text-6xl font-medium">Roman Numeral Converter</h1>
+            </header>
+            <section class="form" aria-labelledby="converter-instructions">
+                <form id="converter-form" aria-describedby="result">
+                    <label class="mb-4 block text-xl" for="text-input">Enter a number:</label>
+                    <div class="input-wrapper">
+                        <input class="bg-gray-50 border border-gray-300 text-gray-900 text-lg font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
+                            id="number" name="text-input" type="number" aria-required="true" required>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button class="mt-4 block bg-blue-500 text-white text-lg font-medium rounded-lg px-4 py-2.5"
+                            id="convert-btn" type="button">Convert</button>
+                    </div>
+                </form>
+                <p class="hidden transition-opacity duration-500 opacity-0 mt-8 text-2xl font-medium bg-blue-500 text-white text-center p-4 rounded-lg"
+                    id="output" role="alert" aria-live="polite"></p>
+            </section>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
